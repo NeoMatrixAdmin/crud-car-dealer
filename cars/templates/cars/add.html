@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='container'>
+    <h1>Add car to database:</h1>
+    
+<form action="" class="row g-3" method="POST">
+    {% csrf_token %}
+  <div class="col-md-4">
+    <label for="validationServer01" class="form-label">Brand</label>
+    <input type="text" id='brand' name='brand' class="form-control" placeholder="Enter the brand please" aria-label="Enter the brand please" aria-describedby="addon-wrapping">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServer02" class="form-label">Last name</label>
+     <input type="text" id ='year' name='year' class="form-control" placeholder="Enter the year please" aria-label="Enter the year please" aria-describedby="addon-wrapping">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+      <label class="form-check-label" for="invalidCheck3">
+        Agree to terms and conditions
+      </label>
+      <div id="invalidCheck3Feedback" class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>
+</div>
+{% endblock %}

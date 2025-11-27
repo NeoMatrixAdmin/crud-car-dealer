@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <div class="card shadow border-0">
+        <div class="card-header bg-dark text-white py-3">
+            <h3 class="mb-0 fw-semibold">Car Inventory</h3>
+        </div>
+
+        <div class="card-body p-0">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="text-center">ID</th>
+                        <th>Brand</th>
+                        <th class="text-center">Year</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for car in all_cars %}
+                    <tr>
+                        <td class="text-center fw-bold">{{ car.id }}</td>
+                        <td class="fw-semibold">{{ car.brand }}</td>
+                        <td class="text-center">{{ car.year }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+
